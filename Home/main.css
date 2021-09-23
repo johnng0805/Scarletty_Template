@@ -77,6 +77,18 @@ nav {
     overflow: hidden;
 }
 
+.navbar__handle {
+    display: none;
+    color: #2B0014;
+    cursor: pointer;
+    margin: 0;
+    transition: all 0.2s linear;
+}
+
+.navbar__handle:hover {
+    color: #FFF5EE;
+}
+
 .dropBtn {
     padding: 0;
     background: none;
@@ -128,7 +140,7 @@ nav {
 header {
     display: flex;
     width: 100%;
-    height: 400px;
+    height: 450px;
     justify-content: center;
     align-items: center;
     background: url(./header_2.jpg);
@@ -138,7 +150,7 @@ header {
 
 header h1 {
     font-family: 'Lobster', cursive;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: lighter;
     letter-spacing: 1px;
     color: #2B0014;
@@ -161,7 +173,7 @@ header h1 {
 }
 
 .featured__items__wrapper {
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
     margin-top: 2.5em;
@@ -219,8 +231,147 @@ header h1 {
     text-align: left;
 }
 
+.lipstick__items__container {
+    text-align: center;
+    width: 100%;
+}
+
+.lipstick__items__title {
+    border-bottom: 1px solid #2B0014;
+}
+
+.lipstick__items__title h4 {
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #2B0014;
+    letter-spacing: 1px;
+}
+
+.lipstick__items__wrapper {
+    margin-top: 2.5em;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.lipstick__items__card {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: 2px 4px 8px black; */
+    border: 1px solid #2B0014;
+    transition: all 0.2s linear;
+}
+
+.lipstick__items__card:hover {
+    transform: scale(1.01);
+}
+
+.lipstick__item__background {
+    width: 100%;
+    height: 70%;
+    background: url(./header.jpg);
+    background-size: cover;
+}
+
+.lipstick__item__content {
+    height: 30%;
+    padding: 1em;
+}
+
+.lipstick__item__name {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lipstick__item__name h4 {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.lipstick__item__name p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0.5em 0 0 0;
+}
+
 @media screen and (max-width: 1600px) {
     .navbar__contents {
         width: 100%;
+    }
+
+    .page__content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .page__content {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .page__content {
+        width: 100%;
+    }
+
+    header {
+        height: 350px;
+    }
+
+    header h1 {
+        font-size: 80px;
+        margin: 0;
+    }
+
+    .featured__items__wrapper {
+        box-shadow: none;
+        border: 1px solid lightgray;
+        flex-direction: column;
+    }
+
+    .featured__items__background {
+        width: 100%;
+        height: 300px;
+    }
+
+    .featured__items__content {
+        width: auto;
+    }
+
+    .featured__items__name h4 {
+        font-size: 20px;
+    }
+
+    .featured__items__name p {
+        font-size: 14px;
+    }
+
+    .featured__items__description p {
+        font-size: 16px;
+    }
+
+    .navbar__links {
+        display: none;
+    }
+
+    .navbar__logo h4 {
+        font-size: 26px;
+    }
+
+    .navbar__handle {
+        display: flex;
+        font-size: 16px;
     }
 }
